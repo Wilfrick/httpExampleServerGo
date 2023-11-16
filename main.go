@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"io"
+	"log"
+	"net"
 	"net/http"
 )
 
@@ -19,7 +21,6 @@ func main() {
 
 	m := http.NewServeMux()
 	m.HandleFunc("/", h1)
-	})
 
 	server := http.Server{
 		Handler: m,
